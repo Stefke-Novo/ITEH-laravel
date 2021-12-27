@@ -29,3 +29,5 @@ Route::get('/vehicle/{vehicle_id}',[VehicleController::class,'show'])->name('veh
 Route::get('/user/{user_id}',[UserController::class,'show'])->name('users.show');
 Route::get('/purchase/{purchase_id}',[PurchaseController::class,'show'])->name('purchases.show');
 Route::post('/carshop/store',[CarShopController::class,'store'])->name('carshop.store');
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
