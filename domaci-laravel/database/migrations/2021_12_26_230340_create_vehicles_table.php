@@ -17,10 +17,11 @@ class CreateVehiclesTable extends Migration
             $table->id();
             $table->string('company');
             $table->string('model');
-            $table->date('date_when_made');
+            $table->integer('year_when_made');
             $table->integer('number_of_seats');
             $table->integer('number_of_doors');
             $table->integer('price');
+            $table->foreignId('car_shop_id');
             $table->timestamps();
         });
     }

@@ -12,10 +12,10 @@ class Purchase extends Model
 {
     use HasFactory;
     public function carShops(){
-        return $this->hasOne(CarShop::class,'id');
+        return $this->belongsTo(CarShop::class,'purchase_id');
     }
     public function vehicles(){
-        return $this->hasOne(Vehicle::class,'id');
+        return $this->belongsTo(Vehicle::class,'purchase_id');
     }
     public function users(){
         return $this->hasOne(User::class,'id');

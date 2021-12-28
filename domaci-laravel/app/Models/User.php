@@ -43,6 +43,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     public function purchases(){
-        return $this->belongsTo(Purchase::class);
+        return $this->belongsTo(Purchase::class,'id','user_id');
     }
 }

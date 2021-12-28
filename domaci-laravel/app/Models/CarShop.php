@@ -16,9 +16,12 @@ class CarShop extends Model
         'location_number'
     ];
     public function purchases(){
-        return $this->belongsTo(Purchase::class);
+        return $this->hasMany(Purchase::class,'car_shop_id');
+    }
+    public function id(){
+        return $this->id;
     }
     public function vehicles(){
-        return $this->hasOne(Vehicle::class,'id');
+        return $this->hasMany(Vehicle::class);
     }
 }

@@ -18,7 +18,7 @@ class PurchaseFactory extends Factory
     {
         return [
             'user_id'=>User::factory(),
-            'car_shop_id'=>CarShop::factory(),
+            //'car_shop_id'=>CarShop::factory(),
             'vehicle_id'=>Vehicle::factory(),
             'purchase_time'=>now(),
             'payment_type'=>rand(0,1)==1?'money':'in installments'

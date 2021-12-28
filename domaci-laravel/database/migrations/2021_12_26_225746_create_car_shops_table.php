@@ -15,8 +15,7 @@ class CreateCarShopsTable extends Migration
     {
         Schema::create('car_shops', function (Blueprint $table) {
             $table->id();
-            $table->string('local');
-            $table->foreignId('vehicle_id')->unique();
+            $table->string('local')->unique();
             $table->string('location');
             $table->integer('location_number');
             $table->timestamps();

@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Vehicle;
 
 class CarShopFactory extends Factory
 {
@@ -15,7 +14,7 @@ class CarShopFactory extends Factory
     public function definition()
     {
         return [
-            'local'=>($broj=rand(0,10))==1?"Audi":$broj==2?
+            /*'local'=>($broj=rand(0,10))==1?"Audi":$broj==2?
             "Nissan":$broj==3?
             "Bugatti":$broj==4?
             "BMV":$broj==5?
@@ -23,8 +22,7 @@ class CarShopFactory extends Factory
             "Tesla":$broj==7?
             "Jeep":$broj==8?
             "Rolls-Royce":$broj==9?
-            "Lamborghini":"Toyota",
-            'vehicle_id'=>Vehicle::factory(),
+            "Lamborghini":"Toyota",*/
             'location'=>$this->faker->name(),
             'location_number'=>rand(0,99)
         ];

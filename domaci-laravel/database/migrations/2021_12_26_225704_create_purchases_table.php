@@ -16,9 +16,9 @@ class CreatePurchasesTable extends Migration
         Schema::create('purchases', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('user_id')->unique();
-            $table->foreignId('car_shop_id')->unique();
-            $table->foreignId('vehicle_id')->unique();
+            $table->foreignId('user_id');
+            $table->foreignId('car_shop_id');
+            $table->foreignId('vehicle_id');
             $table->time('purchase_time');
             $table->string('payment_type');
         });
